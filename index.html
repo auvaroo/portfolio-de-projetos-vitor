@@ -1,218 +1,181 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfólio - Alvaro Costa</title>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Meu portfólio</title>
+    <!-- Estilos extras -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header class="container text-center">
-        <img src="img/ig project.jpg" alt="avatar de Alvaro feliz no simples" class="rounded-circle" width="150" height="150"
-            srcset="">
-        <p class="lead">Eu sou Alvaro</p>
-        <h1>Eu estudo Programação</h1>
-        <p>Sou estudante de Computação e Cantor. Aprendo pensamento computacional usando HTML, CSS e JavaScript. Veja os projetos
-            que já desenvolvi!</p>
-        <p>Minhas habilidades</p>
-        <div>
-            <p class="badge bg-secondary">goodnight menina</p>
-            <p class="badge bg-secondary">meu nome não é igor</p>
-            <p class="badge bg-secondary">OQIGAP?</p>
-            <p class="badge bg-secondary">Scratch</p>
-        </div>
-    </header>
-    <main class="container mt-5">
-        <h2>Meus projetos</h2>
-        <div class="row">
-            <!-- Projeto 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/ig 2.jfif" class="card-img-top" alt="Imagem do projeto de biblioteca virtual">
-                    <div class="card-body">
-                        <h5 class="card-title">Minha história: Uma Webpage Personalizada</h5>
-                        <p class="card-text">Este projeto é uma página web que apresenta uma lista das minhas melhores músicas,
-                            incluindo informações sobre os autores, datas de publicação.
-                            A página é estilizada com CSS para uma visualização agradável e usa fontes
-                            externas do Google.
-                        </p>
-                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Veja
-                            o projeto</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Projeto 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/projeto-2.png" class="card-img-top" alt="Imagem do projeto de biblioteca virtual">
-                    <div class="card-body">
-                        <h5 class="card-title">Decidindo o Futuro: Uma Jornada Interativa sobre a Inteligência
-                            Artificial</h5>
-                        <p class="card-text">Este projeto é um jogo interativo baseado em navegador que explora o
-                            impacto e as implicações da Inteligência Artificial (IA) na sociedade, permitindo que as
-                            pessoas jogadoras façam escolhas que influenciam o desenrolar de uma narrativa sobre o
-                            futuro da IA.</p>
-                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">Veja
-                            o projeto</button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Projeto 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/projeto-3.png" class="card-img-top" alt="Imagem do projeto de biblioteca virtual">
-                    <div class="card-body">
-                        <h5 class="card-title">Explorando o Universo: Uma Aventura Interativa em Astronomia com Scratch
-                        </h5>
-                        <p class="card-text">EEste projeto Scratch cria uma experiência interativa educativa sobre
-                            astronomia, permitindo aos usuários explorar informações sobre constelações, eclipses, e a
-                            forma da Terra através de cenários dinâmicos e diálogos informativos.
-                        </p>
-                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">Veja
-                            o projeto</button>
+    <!-- Menu de Acessibilidade -->
+    <div id="botao-acessibilidade" aria-label="Botão de Acessibilidade" aria-expanded="false" tabindex="0">
+        ⚙️
+    </div>
+    <ul id="opcoes-acessibilidade" class="opcoes-acessibilidade">
+        <li><button id="alterna-contraste" aria-pressed="false">Alto contraste</button></li>
+        <li><button id="aumentar-fonte">Aumentar fonte</button></li>
+        <li><button id="diminuir-fonte">Diminuir fonte</button></li>
+    </ul>
+
+    <!-- Cabeçalho -->
+    <header class="container text-center py-5">
+        <img src="img/ig project.jpg" alt="Foto de Alvaro sorrindo" class="rounded-circle mb-3" width="150" height="150">
+        <h1 tabindex="0">Alvaro Costa</h1>
+        <p class="lead">Estudante de Computação e Cantor 🎶</p>
+        <p>Aprendo pensamento computacional com <strong>HTML, CSS e JavaScript</strong>. Veja meus projetos abaixo!</p>
+        <div class="mt-3">
+            <span class="badge bg-secondary">Scratch</span>
+            <span class="badge bg-secondary">HTML & CSS</span>
+            <span class="badge bg-secondary">JavaScript</span>
+            <span class="badge bg-secondary">Bootstrap</span>
+        </div>
+        <nav class="mt-4">
+            <a class="btn btn-outline-primary m-1" href="#sobre">Sobre</a>
+            <a class="btn btn-outline-primary m-1" href="#projetos">Projetos</a>
+            <a class="btn btn-outline-primary m-1" href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo-principal" class="container">
+
+        <!-- Sobre -->
+        <section id="sobre" class="my-5">
+            <h2>Sobre mim</h2>
+            <p>
+                Sou curioso e apaixonado por aprender. Exploro linguagens de programação, gosto de cantar
+                e acredito que tecnologia pode transformar vidas. Busco evoluir constantemente no
+                desenvolvimento de sistemas e no lado criativo também.
+            </p>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="my-5">
+            <h2>Meus projetos</h2>
+            <div class="row">
+                <!-- Projeto 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/ig 2.jfif" class="card-img-top" alt="Projeto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Minha história: Webpage Personalizada</h5>
+                            <p class="card-text">Página web com lista das minhas músicas favoritas,
+                                estilizada com CSS e fontes externas.</p>
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Veja o projeto</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/projeto-2.png" class="card-img-top" alt="Projeto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Decidindo o Futuro: IA Interativa</h5>
+                            <p class="card-text">Jogo narrativo sobre impacto da Inteligência Artificial
+                                na sociedade.</p>
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">Veja o projeto</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/projeto-3.png" class="card-img-top" alt="Projeto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Explorando o Universo: Astronomia</h5>
+                            <p class="card-text">Experiência educativa no Scratch sobre astronomia,
+                                constelações e eclipses.</p>
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">Veja o projeto</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="my-5 text-center">
+            <h2>Contato</h2>
+            <p>Entre em contato pelo email:</p>
+            <p><a href="mailto:alvaro@email.com">alvaro@email.com</a></p>
+            <div class="mt-3">
+                <i class="bi bi-github"></i> <a href="https://github.com/femascheti" target="_blank">GitHub</a>
+            </div>
+        </section>
     </main>
 
-    <!-- Modal 1 -->
-    <div class="modal" id="modal1" tabindex="-1">
-        <div class="modal-dialog">
+    <!-- Modais dos projetos -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Minha Biblioteca: Uma Webpage Personalizada</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title">Minha história: Webpage Personalizada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p>O projeto é uma página web criada com HTML e CSS, destinada a exibir uma coleção pessoal de
-                        livros favoritos. O objetivo é criar um ambiente virtual onde seja possível compartilhar
-                        seus livros preferidos, fornecendo uma descrição breve de cada um, incluindo o autor, o ano
-                        de publicação e uma opção de compra.</p>
-                    <p>A estrutura do site é baseada em HTML, que define a semântica e o layout do conteúdo,
-                        enquanto o CSS é usado para estilizar a página visualmente, incluindo cores, tipografia e a
-                        disposição dos elementos.</p>
-                    <p>O HTML organiza o conteúdo em um cabeçalho com o título do site, seguido por uma divisão
-                        principal (.container) que apresenta o propósito do site e a coleção de livros em uma seção
-                        flexível (.livros). Cada livro é destacado em seu próprio contêiner (.livro), mostrando uma
-                        imagem da capa, detalhes do livro e um link de compra. O design responsivo é garantido pelo
-                        uso de uma meta tag viewport e um layout flexível que se adapta a diferentes tamanhos de
-                        tela.</p>
-                    <p>O CSS personaliza o visual do site, usando variáveis para cores, estilizando o texto com uma
-                        fonte importada do Google Fonts e aplicando um esquema de cores suaves e botões interativos.
-                        O uso de HTML e CSS é importante pois assim é possível criar um site acessível e
-                        esteticamente agradável sem a necessidade de scripts complexos, com foco na usabilidade e na
-                        experiência da pessoa usuária. A escolha da tipografia e do esquema de cores contribui para
-                        a atmosfera acolhedora do site, incentivando a exploração da coleção de livros.</p>
-                    <img src="img/projeto-1.png" class="img-fluid w-100"
-                        alt="Imagem representativa do projeto de uma biblioteca online">
+                    <p>Página criada em HTML e CSS para exibir músicas favoritas com design responsivo.</p>
+                    <img src="img/projeto-1.png" class="img-fluid" alt="Preview do projeto 1">
                 </div>
                 <div class="modal-footer">
-                    <a href="https://femascheti.github.io/minhas-leituras/">Ver projeto ao vivo</a>
-                    <a href="https://github.com/femascheti/minhas-leituras">Ver código do projeto</a>
+                    <a href="#" target="_blank">Ver projeto ao vivo</a>
+                    <a href="#" target="_blank">Ver código no GitHub</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal 2 -->
-    <div class="modal" id="modal2" tabindex="-1">
-        <div class="modal-dialog">
+    <div class="modal fade" id="modal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Minha Biblioteca: Uma Webpage Personalizada</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title">Decidindo o Futuro: IA Interativa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p>O projeto consiste em uma aplicação web interativa, desenvolvida com HTML, CSS, e JavaScript, que
-                        simula uma experiência narrativa centrada no tema da Inteligência Artificial. O objetivo é
-                        engajar os jogadores em um cenário fictício que aborda o avanço da IA e suas possíveis
-                        consequências para a humanidade, destacando a importância da reflexão ética sobre a tecnologia.
-                    </p>
-                    <p>O HTML estrutura o conteúdo da página, dividindo-o em seções como a tela inicial, caixa de
-                        perguntas, alternativas de resposta, e o resultado final baseado nas escolhas do jogador. O CSS
-                        é utilizado para estilizar a página, empregando um esquema de cores futurista e layout
-                        responsivo para melhorar a experiência do usuário. JavaScript é usado para adicionar
-                        interatividade ao jogo, manipulando o DOM para atualizar o conteúdo da página conforme as
-                        escolhas do jogador, e determinando o fluxo da narrativa através de uma série de perguntas e
-                        respostas.</p>
-                    <p>O HTML organiza o conteúdo em um cabeçalho com o título do site, seguido por uma divisão
-                        principal (.container) que apresenta o propósito do site e a coleção de livros em uma seção
-                        flexível (.livros). Cada livro é destacado em seu próprio contêiner (.livro), mostrando uma
-                        imagem da capa, detalhes do livro e um link de compra. O design responsivo é garantido pelo
-                        uso de uma meta tag viewport e um layout flexível que se adapta a diferentes tamanhos de
-                        tela.</p>
-                    <p>Os scripts JavaScript incluem módulos para gerar nomes aleatórios, definir as perguntas e as
-                        lógicas de jogo, como iniciar o jogo, apresentar perguntas e alternativas, processar as escolhas
-                        dos jogadores, e exibir o resultado final. Este design modular facilita a manutenção e a
-                        expansão futura do jogo. A importância das ferramentas utilizadas (HTML, CSS, JavaScript) reside
-                        na criação de uma experiência interativa que não apenas entretém, mas também educa os jogadores
-                        sobre a complexidade ética e social da IA, incentivando a reflexão crítica sobre o papel da
-                        tecnologia em nossas vidas.
-                    </p>
-                    <img src="img/projeto-2.png" class="img-fluid w-100"
-                        alt="Imagem representativa do projeto de uma biblioteca online">
+                    <p>Aplicação web interativa que explora narrativas sobre Inteligência Artificial,
+                        suas implicações e escolhas possíveis para o futuro.</p>
+                    <img src="img/projeto-2.png" class="img-fluid" alt="Preview do projeto 2">
                 </div>
                 <div class="modal-footer">
-                    <a href="https://femascheti.github.io/tecnicas-computacionais-refletindo-sobre-ia/">Ver projeto ao
-                        vivo</a>
-                    <a href="https://github.com/femascheti/tecnicas-computacionais-refletindo-sobre-ia">Ver código do
-                        projeto</a>
+                    <a href="#" target="_blank">Ver projeto ao vivo</a>
+                    <a href="#" target="_blank">Ver código no GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Explorando o Universo: Astronomia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Projeto Scratch para explorar conceitos básicos de astronomia com cenários
+                        interativos.</p>
+                    <img src="img/projeto-3.png" class="img-fluid" alt="Preview do projeto 3">
+                </div>
+                <div class="modal-footer">
+                    <a href="https://scratch.mit.edu/projects/951732825/" target="_blank">Ver projeto ao vivo</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal 3 -->
-    <div class="modal" id="modal3" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Minha Biblioteca: Uma Webpage Personalizada</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>O projeto é uma aplicação educativa interativa focada em ensinar conceitos básicos de
-                        astronomia. Utiliza uma série de scripts associados a diferentes atores (sprites) e
-                        cenários para criar uma experiência de aprendizado envolvente. O objetivo é familiarizar
-                        os usuários com tópicos como as fases da Lua, eclipses, a visibilidade de diferentes
-                        constelações dependendo da localização geográfica na Terra, e a forma da Terra, através
-                        de interações e visualizações dinâmicas.</p>
-                    <p>Cada ator no projeto possui scripts que definem seu comportamento em resposta a eventos
-                        específicos, como o início do programa (quando a bandeira é clicada), cliques do
-                        usuário, ou mensagens recebidas. Estes eventos desencadeiam ações como mudanças de
-                        cenário, movimentos de atores, exibição ou ocultação de atores, e a apresentação de
-                        diálogos informativos. Por exemplo, ao clicar em determinados atores, os usuários podem
-                        "receber" uma prova, o que leva a uma mudança de cenário e a exibição de informações
-                        relevantes ou a visualização de uma constelação específica.</p>
-                    <p>A importância das ferramentas utilizadas, como os blocos de código visual do Scratch,
-                        reside na sua acessibilidade e na capacidade de engajar aprendizes de diferentes idades
-                        no pensamento computacional e na exploração de conceitos científicos de forma
-                        interativa. O uso de cenários, movimentos, e diálogos dinâmicos ajuda a criar uma
-                        experiência de aprendizado mais rica e memorável, encorajando os usuários a explorar e
-                        interagir com o conteúdo de maneira ativa, em vez de passivamente.</p>
-                    <img src="img/projeto-3.png" alt="Projeto 3" class="img-fluid w-100">
-                </div>
-                <div class="modal-footer">
-                    <a href="https://scratch.mit.edu/projects/951732825/">Ver projeto ao vivo</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="container py-5">
-        <h2>Entre em contato</h2>
-        <div>
-            <i class="bi bi-github"></i>
-            <a href="https://github.com/femascheti">GitHub</a>
-        </div>
-        <p class="my-5 text-center">© Copyright 2024. Produzido por Fernanda Mascheti</p>
+    <!-- Rodapé -->
+    <footer class="container text-center py-4">
+        <p>© 2025 Alvaro Costa | Feito com ♥</p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+</body>
 </html>
